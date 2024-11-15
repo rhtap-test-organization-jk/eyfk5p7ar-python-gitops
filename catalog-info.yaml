@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: eyfk5p7ar-python-gitops
+  description: This is GitOps manifest for eyfk5p7ar-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: eyfk5p7ar-python
+    backstage.io/kubernetes-id: eyfk5p7ar-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: eyfk5p7ar-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:eyfk5p7ar-python
